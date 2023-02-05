@@ -32,8 +32,7 @@ class Message(models.Model):
         super(Message, self).save(*args,**kwargs)
         if new is None:
             self.notify_ws_clients()
-    class Meta:
-        app_label = 'core'
-        verbose_name = 'message'
-        verbose_name_plural = 'messages'
-        ordering = '-timestamp'
+   # class Meta:
+   #     verbose_name = 'message'
+   #     verbose_name_plural = 'messages'
+   #     ordering = '-timestamp'
