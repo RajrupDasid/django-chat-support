@@ -17,6 +17,7 @@ class MessageSeializer(ModelSerializer):
         msg = Message(recipient=recipient, body=validated_data['body'], user=user)
         msg.save()
         return msg
+        
 class UserSerializer(ModelSerializer):
     class Meta:
         model = User
